@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PREDICTION PAGE</title>
+    <style>
+        body{
+    background-image : url(" {% static 'DiabetesPrediction/images/2920271.jpg' %}");
+    background-size:cover;
+    background-repeat:no-repeat;
+         background-attachment: fixed;
+    }
+
+        .main{
+        position:fixed;
+        top:100px;
+        left:530px;
+        width:600px;
+        height:650px;
+        background-color: 'white';
+        border-radius:10px;
+        align-items:center;
+        padding:2.7%;
+        }
+         h1{
+            color: #D23369;
+            font-family: arial, sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            }
+        h2{
+            color: #0D4C92;
+            font-family: arial, sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+            color: "white";
+        }
+        input[type=submit]{
+            background-color: #F06292;
+            border: 2px;
+            border-style: solid;
+            color: white;
+            padding: 7px 20px;
+            cursor: pointer;
+            margin-top: 15px;
+            border-radius : 5px;
+            font-size: 15px;
+        }
+        input[type=text]{
+            background-color: #5F9DF7;
+            border: 2px;
+            border-style: solid;
+            color: white;
+            padding: 7px 20px;
+            cursor: pointer;
+            margin-top: 15px;
+            border-radius : 5px;
+            font-size: 15px;
+        }
+        td{
+         color: #FAF7F0;
+            font-family: arial, sans-serif;
+            font-size: 17px;
+            font-weight: bold;
+            color: #0D4C92;
+        }
+
+         h3{
+         color: #E0144C;
+            font-family: arial, sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+<h2 align="center">
+  WELCOME TO THE PREDICT PAGE
+</h2>
+<div align="center" class="main">
+
+    <h1>
+        PLEASE ENTER THE FOLLOWING INFORMATION
+    </h1>
+    <form action="result">
+        <table>
+            <tr>
+                <td align="right">PREGNANCIES : </td>
+                <td align="left"><input type="text" name="n1" required maxlength="45"></td>
+            </tr>
+            <tr>
+                <td align="right">GLUCOSE : </td>
+                <td align="left"><input type="text" name="n2" required maxlength="45"></td>
+            </tr>
+            <tr>
+                <td align="right">BLOOD PRESSURE : </td>
+                <td align="left"><input type="text" name="n3" required maxlength="45"></td>
+            </tr>
+            <tr>
+                <td align="right">SKIN THICKNESS : </td>
+                <td align="left"><input type="text" name="n4" required maxlength="45"></td>
+            </tr>
+            <tr>
+                <td align="right">INSULIN : </td>
+                <td align="left"><input type="text" name="n5" required maxlength="45"></td>
+            </tr>
+             <tr>
+                <td align="right">BMI : </td>
+                <td align="left"><input type="text" name="n6" required maxlength="45"></td>
+            </tr>
+            <tr>
+                <td align="right">DIABETES PEDIGREE FUNCTION : </td>
+                <td align="left"><input type="text" name="n7" required maxlength="45"></td>
+            </tr>
+            <tr>
+                <td align="right">AGE : </td>
+                <td align="left"><input type="text" name="n8" required maxlength="45"></td>
+            </tr>
+        </table>
+
+        <input type="submit">
+    </form>
+    <h3>RESULT : {{result2}}</h3>
+</div>
+</body>
+</html>
